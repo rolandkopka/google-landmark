@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Folder containing the script is the root
+cd $(dirname $0)
+
 # Number of processes to run in parallel.
 # Default was NUM_PROC=6
 NUM_PROC=$2
