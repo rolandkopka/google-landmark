@@ -18,11 +18,11 @@ cd $(dirname $0)
 
 # Number of processes to run in parallel.
 # Default was NUM_PROC=6
-NUM_PROC=$2
+NUM_PROC=`expr $2 - 1`
 
 # Inclusive upper limit for file downloads.
 # Default of N=499 will download all files, i.e. images_000.tar...images_499.tar
-N=$1
+N=`expr $1 - 1`
 
 download_check_and_extract() {
   local i=$1
