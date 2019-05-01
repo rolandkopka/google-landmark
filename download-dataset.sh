@@ -14,11 +14,12 @@
 # limitations under the License.
 
 # Number of processes to run in parallel.
-NUM_PROC=6
+# Default was NUM_PROC=6
+NUM_PROC=$2
 
 # Inclusive upper limit for file downloads.
 # Default of N=499 will download all files, i.e. images_000.tar...images_499.tar
-N=499
+N=$1
 
 download_check_and_extract() {
   local i=$1
